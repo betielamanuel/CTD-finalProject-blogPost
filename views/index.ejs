@@ -1,0 +1,21 @@
+<div class="author">
+    <h1 class="author__heading">Hello World, I'm Betiel</h1>
+    <p class="author__body">I'm a MERN Full Stack Developer</p>
+</div>
+
+<img src="/img/Women-in-Programming-1-2.jpeg" alt="women sitting in front of computer" class="programmer-image" width="981" height="528">
+
+<section class="articles">
+    <h2 class="articles__heading">Latest Posts</h2>
+    
+    <ul class="article-ul">
+        <% data.forEach(post => { %>
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </li>
+        <% }) %>
+    </ul>
+</section>
